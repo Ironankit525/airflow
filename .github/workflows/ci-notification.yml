@@ -17,13 +17,13 @@
 #
 ---
 name: "CI Notification"
-on:  # yamllint disable-line rule:truthy
-  schedule:
-    - cron: ''
+
+on:
   workflow_dispatch:
+
 permissions:
-  # All other permissions are set to none by default
   contents: read
+
 env:
   GITHUB_REPOSITORY: ${{ github.repository }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
